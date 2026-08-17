@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_tapsell_mediation_example/ad/tapsell_mediation_keys.dart';
+import 'package:flutter_tapsell_mediation_example/ad/zone_ids.dart';
 import 'package:tapsell_mediation/tapsell.dart';
 import 'package:tapsell_mediation_legacy/tapsell_mediation_legacy.dart';
 
@@ -33,7 +33,7 @@ class _NativeState extends State<Native> {
   }
 
   void requestNativeAd() {
-    Tapsell.requestNativeAd(TapsellMediationKeys.native).then((adId) {
+    Tapsell.requestNativeAd(ExampleKeys.native).then((adId) {
       _adId = adId!;
       addLog('onSuccess: $adId');
     }).catchError((error) {

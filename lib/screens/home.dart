@@ -1,6 +1,5 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_tapsell_mediation_example/navigation/routes.dart';
-import 'package:get/get.dart';
 
 class Home extends StatelessWidget {
   const Home({super.key});
@@ -20,24 +19,24 @@ class Home extends StatelessWidget {
           children: <Widget>[
             ElevatedButton(
               child: const Text("Rewarded"),
-              onPressed: () => {Get.toNamed(NavRoutes.rewarded)},
+              onPressed: () => Navigator.pushNamed(context, NavRoutes.rewarded),
             ),
             ElevatedButton(
               child: const Text("Interstitial"),
               onPressed: () {
-                Get.toNamed(NavRoutes.interstitial);
+                Navigator.pushNamed(context, NavRoutes.interstitial);
               },
             ),
             ElevatedButton(
               child: const Text("Banner"),
               onPressed: () {
-                Get.toNamed(NavRoutes.banner);
+                Navigator.pushNamed(context, NavRoutes.banner);
               },
             ),
             ElevatedButton(
               child: const Text("Native"),
               onPressed: () {
-                Get.toNamed(NavRoutes.native);
+                Navigator.pushNamed(context, NavRoutes.native);
               },
             )
           ],

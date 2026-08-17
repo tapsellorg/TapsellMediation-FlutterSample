@@ -2,7 +2,7 @@ import 'dart:async';
 
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
-import 'package:flutter_tapsell_mediation_example/ad/tapsell_mediation_keys.dart';
+import 'package:flutter_tapsell_mediation_example/ad/zone_ids.dart';
 import 'package:tapsell_mediation/tapsell.dart';
 
 class Interstitial extends StatefulWidget {
@@ -28,7 +28,7 @@ class _InterstitialState extends State<Interstitial> {
 
   Future<void> requestInterstitialAd() async {
     try {
-      _adId = await Tapsell.requestInterstitialAd(TapsellMediationKeys.interstitial) ??
+      _adId = await Tapsell.requestInterstitialAd(ExampleKeys.interstitial) ??
           'Unknown ad id';
     } on PlatformException catch (e) {
       _adId = 'Failed to request ad. Error: ${e.message}';

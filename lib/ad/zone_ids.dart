@@ -1,4 +1,11 @@
-class TapsellMediationKeys {
+class ExampleKeys {
+  static const String rewarded = MediationKeys.rewarded;
+  static const String interstitial = MediationKeys.interstitial;
+  static const String native = MediationKeys.native;
+  static const String banner = MediationKeys.banner;
+}
+
+class MediationKeys {
   static const String rewarded = "1d710cc7-5e96-46ac-a3e9-8463300333e6";
   static const String interstitial = "b3972749-f62a-475a-9ff2-cfc9e2a40f87";
   static const String native = "d217e3e6-0070-4120-925d-5d39d0298893";

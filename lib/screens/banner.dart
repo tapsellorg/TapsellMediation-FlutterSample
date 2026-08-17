@@ -2,7 +2,7 @@ import 'dart:async';
 
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
-import 'package:flutter_tapsell_mediation_example/ad/tapsell_mediation_keys.dart';
+import 'package:flutter_tapsell_mediation_example/ad/zone_ids.dart';
 import 'package:tapsell_mediation/tapsell.dart';
 
 class Banner extends StatefulWidget {
@@ -28,8 +28,8 @@ class _BannerState extends State<Banner> {
 
   Future<void> requestBannerAd() async {
     try {
-      _adId = await Tapsell.requestBannerAd(TapsellMediationKeys.banner,
-              bannerSize: BannerSize.banner_320_90) ??
+      _adId = await Tapsell.requestBannerAd(ExampleKeys.banner,
+              bannerSize: BannerSize.banner_320_50) ??
           'Unknown ad id';
     } on PlatformException catch (e) {
       _adId = 'Failed to request ad. Error: ${e.message}';

@@ -7,7 +7,6 @@ import 'package:flutter_tapsell_mediation_example/screens/home.dart';
 import 'package:flutter_tapsell_mediation_example/screens/interstitial.dart';
 import 'package:flutter_tapsell_mediation_example/screens/native.dart';
 import 'package:flutter_tapsell_mediation_example/screens/rewarded.dart';
-import 'package:get/get.dart';
 import 'package:tapsell_mediation/tapsell.dart';
 
 void main() {
@@ -47,35 +46,20 @@ class _MyAppState extends State<MyApp> {
 
   @override
   Widget build(BuildContext context) {
-    return GetMaterialApp(
-      home: const Home(),
+    return MaterialApp(
+      initialRoute: NavRoutes.home,
       theme: ThemeData(
         primaryColor: Colors.deepOrange,
         colorScheme:
             ColorScheme.fromSwatch().copyWith(secondary: Colors.deepOrange),
       ),
-      getPages: [
-        GetPage(
-            name: NavRoutes.home,
-            page: () => const Home(),
-            transition: Transition.fadeIn),
-        GetPage(
-            name: NavRoutes.rewarded,
-            page: () => const Rewarded(),
-            transition: Transition.leftToRight),
-        GetPage(
-            name: NavRoutes.interstitial,
-            page: () => const Interstitial(),
-            transition: Transition.leftToRightWithFade),
-        GetPage(
-            name: NavRoutes.banner,
-            page: () => const Banner(),
-            transition: Transition.leftToRight),
-        GetPage(
-            name: NavRoutes.native,
-            page: () => const Native(),
-            transition: Transition.leftToRightWithFade),
-      ],
+      routes: {
+        NavRoutes.home: (context) => const Home(),
+        NavRoutes.rewarded: (context) => const Rewarded(),
+        NavRoutes.interstitial: (context) => const Interstitial(),
+        NavRoutes.banner: (context) => const Banner(),
+        NavRoutes.native: (context) => const Native(),
+      },
     );
   }
 }

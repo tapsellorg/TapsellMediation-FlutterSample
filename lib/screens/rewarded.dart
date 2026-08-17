@@ -2,7 +2,7 @@ import 'dart:async';
 
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
-import 'package:flutter_tapsell_mediation_example/ad/tapsell_mediation_keys.dart';
+import 'package:flutter_tapsell_mediation_example/ad/zone_ids.dart';
 import 'package:tapsell_mediation/tapsell.dart';
 
 class Rewarded extends StatefulWidget {
@@ -28,7 +28,7 @@ class _RewardedState extends State<Rewarded> {
 
   Future<void> requestRewardedAd() async {
     try {
-      _adId = await Tapsell.requestRewardedAd(TapsellMediationKeys.rewarded) ??
+      _adId = await Tapsell.requestRewardedAd(ExampleKeys.rewarded) ??
           'Unknown ad id';
     } on PlatformException catch (e) {
       _adId = 'Failed to request ad. Error: ${e.message}';
