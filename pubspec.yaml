@@ -1,5 +1,5 @@
 name: flutter_tapsell_mediation_example
-version: 1.4.0-alpha03
+version: 1.4.0-alpha05
 description: "Demonstrates how to use the flutter_tapsell_mediation plugin."
 # The following line prevents the package from being accidentally published to
 # pub.dev using `flutter pub publish`. This is preferred for private packages.
@@ -17,15 +17,15 @@ environment:
 dependencies:
   flutter:
     sdk: flutter
-  tapsell_mediation: ^1.4.0-alpha03
-  tapsell_mediation_legacy: ^1.4.0-alpha03
-  tapsell_mediation_admob: ^1.4.0-alpha03
-  tapsell_mediation_applovin: ^1.4.0-alpha03
-  tapsell_mediation_mintegral: ^1.4.0-alpha03
-  tapsell_mediation_ironsource: ^1.4.0-alpha03
-  tapsell_mediation_liftoff: ^1.4.0-alpha03
-  tapsell_mediation_fyber: ^1.4.0-alpha03
-  tapsell_mediation_wortise: ^1.4.0-alpha03
+  tapsell_mediation: ^1.4.0-alpha05
+  tapsell_mediation_legacy: ^1.4.0-alpha05
+  tapsell_mediation_admob: ^1.4.0-alpha05
+  tapsell_mediation_applovin: ^1.4.0-alpha05
+  tapsell_mediation_mintegral: ^1.4.0-alpha05
+  tapsell_mediation_ironsource: ^1.4.0-alpha05
+  tapsell_mediation_liftoff: ^1.4.0-alpha05
+  tapsell_mediation_fyber: ^1.4.0-alpha05
+  tapsell_mediation_wortise: ^1.4.0-alpha05
   #  tapsell_mediation_yandex:
   #    path: ../packages/yandex
   #  tapsell_mediation_chartboost:

@@ -44,13 +44,6 @@ android {
     }
 }
 
-dependencies {
-    // Already on the runtime classpath via the tapsell_mediation plugin, but
-    // declared explicitly so SDK classes (e.g. BannerContainer used in
-    // MainActivity.kt) are available at compile time.
-    implementation("ir.tapsell:tapsell-flutter:1.4.0-alpha03")
-}
-
 flutter {
     source = "../.."
 }

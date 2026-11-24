@@ -1,12 +1,5 @@
 package ir.tapsell.mediation.sample
 
-import android.os.Bundle
 import io.flutter.embedding.android.FlutterActivity
 
-class MainActivity : FlutterActivity() {
-
-    override fun onCreate(savedInstanceState: Bundle?) {
-        super.onCreate(savedInstanceState)
-        InsetHelper.applyInsetsToBannerContainers(this)
-    }
-}
+class MainActivity : FlutterActivity()

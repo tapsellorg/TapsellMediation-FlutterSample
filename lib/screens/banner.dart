@@ -38,7 +38,15 @@ class _BannerState extends State<Banner> {
   }
 
   Future<void> showBannerAd() async {
-    Tapsell.showBannerAd(_adId, bannerPosition: BannerPosition.bottom,
+    // Navigation bar inset in px as bottom margin so the ad is not covered by
+    // the navigation bar in edge-to-edge mode.
+    final mediaQuery = MediaQuery.of(context);
+    final bottomInset =
+        (mediaQuery.viewPadding.bottom * mediaQuery.devicePixelRatio).round();
+
+    Tapsell.showBannerAd(_adId,
+        bannerPosition: BannerPosition.bottom,
+        margin: EdgeInsets.only(bottom: bottomInset.toDouble()),
         onAdImpression: () {
       addLog('onAdImpression');
     }, onAdClicked: () {
